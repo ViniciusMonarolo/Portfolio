@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinícius Portfolio's</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <input id="close-menu" class="close-menu" type="checkbox">
+    <label class="close-menu-label" title="close menu" for="close-menu"></label>
+    <aside class="menu">
+        <div class="menu-content">
+            <h1 onclick="getElementById('close-menu').checked = false;"><a href="#">Portfolio</a></h1>
+            <nav>
+                <ul onclick="getElementById('close-menu').checked = false;">
+                    <li><a href="#intro">Projects</a></li>
+                    <li><a href="#top3">About</a></li>
+                    <li><a href="#gallery">Skills</a></li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+    <div class="menu-spacing"></div>
+
+    <section class="main_bg section">
+        <div class="main-content intro-content">
+            <div class="content">
+                <h2>Portfolio</h2>
+                <p>  Hello, my name is Vinícius and I am a software developer who loves to create innovative and high-quality solutions.
+                     This is my portfolio, where you can find some of my most recent projects and previous works.</p>
+            </div>
+            <div class="content-img">
+                <img src="assets/img/html_css.svg" alt="ANYA">
+            </div>
+        </div>
+    </section>
+
+    <section id="intro" class="white_bg section">
+        <div class="main-content">
+            <h2>Projetos</h2>
+            <p>Aqui Estão Alguns projetos que fiz ao longo da minha jornada estudando programação.
+            </p>
+            <li><a href="https://viniciusmonarolo.github.io/Projeto-Curso/">Projeto De Conclusão Do Segundo Módulo do meu curso</a></li>
+            <li><a href="https://viniciusmonarolo.github.io/Projeto-Pokedex/">Projeto De uma Pokedex que fiz com auxilio de um video</a></li>
+            <li><a href="https://viniciusmonarolo.github.io/Gerador-de-senhas/">Projeto De um Gerador de senhas feito durante uma aula do meu curso</a></li>
+        </div>
+    </section>
+
+    <section id="top3" class="main_bg top3-grid section">
+        <div class="main-content grid-content">
+            <h2 class="grid-spacing-head">About</h2>
+            <p class="grid-spacing">Sobre Mim</p>
+
+            <div class="grid">
+                <article>
+                    <p>Sou um rapaz de 17 anos que estuda programação e que deseja seguir nesta área
+                        por sempre ter gostado de tecnologia.</p>
+                </article>
+                <article>
+                    <p>Por um tempo trabalhei na empresa do meu pai e avô,
+                        nas áreas de produção e administração.
+                    </p>
+                </article>
+                <article>
+                    <p> Tenho nível de inglês intermediário.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="white_bg section ">
+        <div class="main-content grid-content">
+            <h2 class="grid-spacing-head">
+                Skills
+            </h2>
+            <p class="grid-spacing">Minhas capacidades na area de programação. </p>
+            <div class="grid">
+                <div class="gallery-img">
+                  <li>
+                    <img src="assets/img/Python-Light.svg">
+                  </li>
+                </div>
+                <div class="gallery-img">
+                    <li>
+                        <img src="assets/img/HTML.svg">
+                    </li>
+                </div>
+                <div class="gallery-img">
+                    <li>
+                        <img src="assets/img/CSS.svg">
+                    </li>
+                </div>
+        </div>
+    </section>
+
+    

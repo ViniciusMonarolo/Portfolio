@@ -91,12 +91,24 @@ p {
     justify-content: center;
     padding: 0 var(--gap)
 }
-
+.main-content img{
+    width: 100%;
+    max-width: 36rem;
+    max-height: 36rem;
+    overflow: hidden;
+    list-style: none;
+    border-radius: 200px;
+}
+.main-content img:hover{
+    transition: all 300ms ease-in-out;
+    transform: translate(-3%, 3%) scale(1.2) rotate(5deg);
+}
 .main-content {
     max-width: 100rem;
     margin: 0, auto;
     padding: 8rem var(--gap);
     list-style: none;
+    
 }
 .main-content li{
         background: rgba(245, 242, 242, 0);

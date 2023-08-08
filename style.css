@@ -1,7 +1,7 @@
 :root {
     --primary-color: #0a112f;
     --white-color: #fff;
-    --gray-color: #ecebeb;
+    --gray-color: #474646;
     --gap: 3rem;
 }
 
@@ -226,7 +226,7 @@ p {
 
 .intro .main-content {
     max-width: 64rem;
-    text-align: center;
+    text-align: center;   
 }
 
 /* sessão da grid = Top 3 */
@@ -322,25 +322,6 @@ table th {
     background-color: var(--gray-color);
 }
 
-/* Footer */
-.footer {
-    text-align: center;
-    font-size: 1.6rem;
-}
-
-.footer a {
-    color: var(--primary-color);
-}
-
-.footer p {
-    margin: 0;
-    padding: var(--gap);
-}
-
-.heart {
-    color: red;
-}
-
 /* Section formulário */
 
 .formulario {
@@ -410,7 +391,7 @@ table th {
 
 .back-to-top {
     position: fixed;
-    background: var(--white-color);
+    background: gray;
     bottom: 2rem;
     right: 2rem;
     width: 5rem;
@@ -420,8 +401,8 @@ table th {
     justify-content: center;
     align-items: center;
     transform: rotate(-90deg);
-    color: var(--primary-color);
-    border: 0.1rem solid var(--primary-color);
+    color: white;
+    border: 0.1rem solid yellow;
 }
 
 @media (max-width: 70rem) {

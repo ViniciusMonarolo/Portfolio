@@ -483,6 +483,9 @@ table th {
 .footer {
     align-content: center;
     font-size: 1.6rem;
+    justify-content: center;
+    background-image: url(assets/img/Bg_portfilio-cinza.svg);
+    background-size: cover;
 }
 
 .footer a {

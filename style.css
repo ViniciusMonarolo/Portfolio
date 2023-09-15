@@ -418,13 +418,13 @@ table th {
     }
 
     .gallery-img {
-        width: 50%;
-        max-width: 50%;
-        max-height: 50%;
+        width: 95%;
+        max-width: 95%;
+        max-height: 95%;
     }
 
     .gallery-img img {
-        width: 100%;
+        width: 95%;
     }
 
     /* body {
@@ -495,10 +495,11 @@ table th {
 
 .footer p {
     margin: 0;
-    padding: var(--gap);
+    padding: 1px;
     align-items: center;
 }
 
 .heart {
     color: red;
 }
+

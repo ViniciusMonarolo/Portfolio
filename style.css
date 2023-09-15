@@ -480,26 +480,10 @@ table th {
 
 
 }
-.footer {
-    align-content: center;
-    font-size: 1.6rem;
-    justify-content: center;
-    background-image: url(assets/img/Bg_portfilio-cinza.svg);
+.Contato{
+    background-image: url('assets/img/Bg_portfilio-cinza.svg');
     background-size: cover;
-}
-
-.footer a {
-    color: var(--primary-color);
-    align-items: center;
-}
-
-.footer p {
-    margin: 0;
-    padding: 1px;
-    align-items: center;
-}
-
-.heart {
-    color: red;
+    background-position: center center;
+    color: var(--white-color);
 }
 

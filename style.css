@@ -480,10 +480,14 @@ table th {
 
 
 }
-.Contato{
-    background-image: url('assets/img/Bg_portfilio-cinza.svg');
-    background-size: cover;
-    background-position: center center;
-    color: var(--white-color);
-}
+.contact-container {
+    display: grid;
+    place-items: center;
+    min-height: 100vh; /* adjust to your preference */
+  }
+  
+  .contact-content {
+    width: 50%; /* adjust to your preference */
+  }
+
 

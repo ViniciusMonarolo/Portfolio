@@ -1,50 +1,43 @@
- const content = {
-      en: {
-        title: "Vinícius Monarolo",
-        aboutTitle: "About Me",
-        aboutText: "Hi! I'm Vinícius, a passionate developer focused on building clean, modern, and responsive web solutions. I love turning ideas into functional digital experiences.",
-        skillsTitle: "Skills",
-        projectsTitle: "Projects",
-        contactTitle: "Contact"
-      },
-      pt: {
-        title: "Vinícius Monarolo",
-        aboutTitle: "Sobre Mim",
-        aboutText: "Olá! Eu sou Vinícius, um desenvolvedor apaixonado por criar soluções web modernas, limpas e responsivas. Adoro transformar ideias em experiências digitais funcionais.",
-        skillsTitle: "Habilidades",
-        projectsTitle: "Projetos",
-        contactTitle: "Contato"
-      }
-    };
-    let currentLang = 'en';
-    function toggleLanguage() {
-      currentLang = currentLang === 'en' ? 'pt' : 'en';
-      document.getElementById('title').innerText = content[currentLang].title;
-      document.getElementById('about-title').innerText = content[currentLang].aboutTitle;
-      document.getElementById('about-text').innerText = content[currentLang].aboutText;
-      document.getElementById('skills-title').innerText = content[currentLang].skillsTitle;
-      document.getElementById('projects-title').innerText = content[currentLang].projectsTitle;
-      document.getElementById('contact-title').innerText = content[currentLang].contactTitle;
+// Fade-in ao rolar
+const faders = document.querySelectorAll('.fade-in');
+
+window.addEventListener('scroll', () => {
+  faders.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      el.classList.add('show');
     }
+  });
+});
 
-    // Fade-in on scroll
-    const faders = document.querySelectorAll('.fade-in');
+// Troca de idioma (PT/EN simples)
+const langBtn = document.getElementById("lang-toggle");
+let lang = "pt";
 
-    window.addEventListener('scroll', () => {
-      faders.forEach(el => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 100) {
-          el.classList.add('show');
-        }
-      });
-    });
-
-    // Trigger on load for visible elements
-    window.addEventListener('load', () => {
-      faders.forEach(el => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 100) {
-          el.classList.add('show');
-        }
-      });
-    });
+langBtn.addEventListener("click", () => {
+  if (lang === "pt") {
+    document.querySelector("header p").textContent = "Web Developer";
+    document.querySelector("#about h2").textContent = "About me";
+    document.querySelector("#about p").textContent = "I am a developer passionate about technology and creating modern web solutions.";
+    document.querySelector("#projects h2").textContent = "Projects";
+    document.querySelector("#skills h2").textContent = "Skills";
+    document.querySelector("#contact h2").textContent = "Contact";
+    document.querySelectorAll(".btn")[0].textContent = "View Project";
+    document.querySelectorAll(".btn")[1].textContent = "View Project";
+    document.querySelectorAll(".btn")[2].textContent = "View Project";
+    langBtn.textContent = "PT";
+    lang = "en";
+  } else {
+    document.querySelector("header p").textContent = "Desenvolvedor Web";
+    document.querySelector("#about h2").textContent = "Sobre mim";
+    document.querySelector("#about p").textContent = "Sou um desenvolvedor apaixonado por tecnologia e criação de soluções web modernas.";
+    document.querySelector("#projects h2").textContent = "Projetos";
+    document.querySelector("#skills h2").textContent = "Skills";
+    document.querySelector("#contact h2").textContent = "Contato";
+    document.querySelectorAll(".btn")[0].textContent = "Ver Projeto";
+    document.querySelectorAll(".btn")[1].textContent = "Ver Projeto";
+    document.querySelectorAll(".btn")[2].textContent = "Ver Projeto";
+    langBtn.textContent = "EN";
+    lang = "pt";
+  }
+});

@@ -2,122 +2,72 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vinícius Portfolio's</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans&display=swap"
-        rel="stylesheet">
+    
+    <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vinícius Monarolo | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-    <input id="close-menu" class="close-menu" type="checkbox">
-    <label class="close-menu-label" title="close menu" for="close-menu"></label>
-    <aside class="menu">
-        <div class="menu-content">
-            <h1 onclick="getElementById('close-menu').checked = false;"><a href="#">Portfolio</a></h1>
-            <nav>
-                <ul onclick="getElementById('close-menu').checked = false;">
-                    <li><a href="#intro">Projetos</a></li>
-                    <li><a href="#top3">Sobre</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </aside>
-    <div class="menu-spacing"></div>
+    <header>
+    <h1 id="title">Vinícius Monarolo</h1>
+    <button onclick="toggleLanguage()">PT/EN</button>
+  </header>
 
-    <section class="main_bg section">
-        <div class="main-content intro-content">
-            <div class="content">
-                <h2>Portfolio</h2>
-                <p>Olá, Meu nome é Vinícius sou um programador e este é meu portfolio, aqui você pode encontrar informações minhas e sobre meus novos e antigos projetos.</p>
-            </div>
-            <div class="content-img">
-                <img src="assets/img/html_css.svg" alt="Homen ao lado de html e css">
-            </div>
-        </div>
-    </section>
+  <section id="about" class="fade-in">
+    <h2 id="about-title">About Me</h2>
+    <p id="about-text">Hi! I'm Vinícius, a passionate developer focused on building clean, modern, and responsive web solutions. I love turning ideas into functional digital experiences.</p>
+  </section>
 
-    <section id="intro" class="white_bg section">
-        <div class="main-content">
-            <h2>Projetos</h2>
-            <p>Aqui Estão Alguns projetos que fiz ao longo da minha jornada estudando programação.
-            </p>
-            <li><a href="https://viniciusmonarolo.github.io/Projeto-Curso/"><img src="assets/img/img-landing-page.jpg">Projeto 1 - Conclusão De Módulo</a></li>
-            <li><a href="https://viniciusmonarolo.github.io/Projeto-Pokedex/"><img  src="assets/img/img-pokedex.jpg">Projeto 2 - Pokedex</a></li>
-            <li><a href="https://viniciusmonarolo.github.io/Gerador-de-senhas/"><img src="assets/img/img-Gerador-senha.jpg">Projeto 3 - Gerador De Senhas</a></li>
-        </div>
-    </section>
+  <section id="skills" class="fade-in">
+    <h2 id="skills-title">Skills</h2>
+    <div class="skills-grid">
+      <div><i class="fab fa-html5"></i><p>HTML5</p></div>
+      <div><i class="fab fa-css3-alt"></i><p>CSS3</p></div>
+      <div><i class="fab fa-js"></i><p>JavaScript</p></div>
+      <div><i class="fab fa-react"></i><p>React</p></div>
+      <div><i class="fab fa-git-alt"></i><p>Git</p></div>
+      <div><i class="fab fa-github"></i><p>GitHub</p></div>
+    </div>
+  </section>
 
-    <section id="top3" class="main_bg top3-grid section">
-        <div class="main-content grid-content">
-            <h2 class="grid-spacing-head">Sobre</h2>
-            <p class="grid-spacing">Sobre Mim</p>
+  <section id="projects" class="fade-in">
+    <h2 id="projects-title">Projects</h2>
+    <div class="projects">
+      <div class="project fade-in">
+        <h3>Pokedex</h3>
+        <p>A simple Pokémon search app using an external API.</p>
+        <p><strong>Stack:</strong> HTML, CSS, JavaScript</p>
+        <a href="#">View project</a>
+      </div>
+      <div class="project fade-in">
+        <h3>Password Generator</h3>
+        <p>Generate secure passwords with customizable options.</p>
+        <p><strong>Stack:</strong> HTML, CSS, JavaScript</p>
+        <a href="#">View project</a>
+      </div>
+      <div class="project fade-in">
+        <h3>CRUD App</h3>
+        <p>Basic CRUD operations app to manage users.</p>
+        <p><strong>Stack:</strong> HTML, CSS, JavaScript</p>
+        <a href="#">View project</a>
+      </div>
+    </div>
+  </section>
 
-            <div class="grid">
-                <article>
-                    <p>Sou um rapaz de 18 anos que estuda programação e que deseja seguir nesta área
-                        por sempre ter gostado de tecnologia, Atualmente cursando Programação na escola Ctrl+Play.</p>
-                </article>
-                <article>
-                    <p>Por um tempo trabalhei em empresa familiar
-                        nas áreas de produção e administração.
-                    </p>
-                </article>
-                <article>
-                    <p> Tenho nível de inglês intermediário.</p>
-                </article>
-            </div>
-        </div>
-    </section>
-    <section class="contact-container" id="contato">
-        <div class="contact-content">
-            <h2>Contatos</h2>
+  <section id="contact" class="fade-in">
+    <h2 id="contact-title">Contact</h2>
+    <div class="contact-links">
+      <a href="mailto:vinicius@email.com"><i class="fas fa-envelope"></i>Email</a>
+      <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn</a>
+      <a href="https://github.com/viniciusmonarolo" target="_blank"><i class="fab fa-github"></i>GitHub</a>
+      <a href="/resume.pdf" target="_blank"><i class="fas fa-file"></i>Resume</a>
+    </div>
+  </section>
 
-<p>
-  <a href="mailto:monarolovinicius001@gmail.com">
-    <img src="assets/img/email logo portfolio.png" alt="Email icon" width="20px" height="20px">
-    monarolovinicius001@gmail.com
-  </a>
-</p>
-
-<p>
-  <a href="https://wa.me/+5511992703337">
-    <img src="assets/img/icone_whatss.avif" alt="WhatsApp icon" width="20px" height="20px">
-    +55 (11) 99270-3337
-  </a>
-</p>
-
-<p>
-  <a href="https://www.linkedin.com/in/vin%C3%ADcius-monarolo-b578b62a6/">
-    <img src="assets/img/linkdekin logo portfolio.png" alt="LinkedIn icon" width="20px" height="20px">
-    linkedin.com/in/vinicius monarolo/
-  </a>
-</p>
-
-<p>
-    <a href="https://github.com/ViniciusMonarolo">
-        <img src="assets/img/logo git portfolio.png" alt="Github icon" width="20px" height="20px">
-        https://github.com/ViniciusMonarolo
-    </a>
-</p>
-
-<p>
-    <a href="https://viniciusmonarolo.github.io/Curriculo/">
-        <img src="assets/img/img curriculo portfolio.jpg" alt="Curriculo icon" width="20px" height="20px">
-        Meu Currículo
-    </a>
-</p>
-
-<p>
-    Sinta-se a vontade de me procurar caso se sinta interessado em saber mais ou querer que eu lhe faça algum tipo de serviço.
-  </p>
-        </div>
-        <a class="back-to-top" href="#">➤</a>
-    </section>
+  <footer>
+    <p>&copy; 2025 Vinícius Monarolo. All rights reserved.</p>
+  </footer>
     </body>
     

@@ -1,75 +1,71 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="pt">
 <head>
-    
-    <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vinícius Monarolo | Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-     <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Portfólio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
-
 <body>
-    <header>
-    <h1 id="title">Vinícius Monarolo</h1>
-    <button onclick="toggleLanguage()">PT/EN</button>
+  <header>
+    <h1>Vinícius Monarolo</h1>
+    <p>Desenvolvedor Web</p>
+    <button id="lang-toggle">EN</button>
   </header>
 
   <section id="about" class="fade-in">
-    <h2 id="about-title">About Me</h2>
-    <p id="about-text">Hi! I'm Vinícius, a passionate developer focused on building clean, modern, and responsive web solutions. I love turning ideas into functional digital experiences.</p>
-  </section>
-
-  <section id="skills" class="fade-in">
-    <h2 id="skills-title">Skills</h2>
-    <div class="skills-grid">
-      <div><i class="fab fa-html5"></i><p>HTML5</p></div>
-      <div><i class="fab fa-css3-alt"></i><p>CSS3</p></div>
-      <div><i class="fab fa-js"></i><p>JavaScript</p></div>
-      <div><i class="fab fa-react"></i><p>React</p></div>
-      <div><i class="fab fa-git-alt"></i><p>Git</p></div>
-      <div><i class="fab fa-github"></i><p>GitHub</p></div>
-    </div>
+    <h2>Sobre mim</h2>
+    <p>Sou um desenvolvedor apaixonado por tecnologia e criação de soluções web modernas.</p>
   </section>
 
   <section id="projects" class="fade-in">
-    <h2 id="projects-title">Projects</h2>
-    <div class="projects">
-      <div class="project fade-in">
-        <h3>Pokedex</h3>
-        <p>A simple Pokémon search app using an external API.</p>
-        <p><strong>Stack:</strong> HTML, CSS, JavaScript</p>
-        <a href="#">View project</a>
-      </div>
-      <div class="project fade-in">
-        <h3>Password Generator</h3>
-        <p>Generate secure passwords with customizable options.</p>
-        <p><strong>Stack:</strong> HTML, CSS, JavaScript</p>
-        <a href="#">View project</a>
-      </div>
-      <div class="project fade-in">
+    <h2>Projetos</h2>
+    <div class="projects-grid">
+      <div class="project">
+        <i class='bx bxs-data'></i>
         <h3>CRUD App</h3>
-        <p>Basic CRUD operations app to manage users.</p>
-        <p><strong>Stack:</strong> HTML, CSS, JavaScript</p>
-        <a href="#">View project</a>
+        <p>Aplicação CRUD simples feita em JavaScript.</p>
+        <a href="https://github.com/ViniciusMonarolo/Projeto-Curso" target="_blank" class="btn">Ver Projeto</a>
       </div>
+      <div class="project">
+        <i class='bx bxs-pokemon'></i>
+        <h3>Pokedex</h3>
+        <p>Pokedex com consumo de API para exibir dados de Pokémon.</p>
+        <a href="https://github.com/ViniciusMonarolo/Projeto-Pokedex" target="_blank" class="btn">Ver Projeto</a>
+      </div>
+      <div class="project">
+        <i class='bx bx-key'></i>
+        <h3>Gerador de Senhas</h3>
+        <p>Gerador de senhas seguras com opções personalizadas.</p>
+        <a href="https://github.com/ViniciusMonarolo/Gerador-de-senhas" target="_blank" class="btn">Ver Projeto</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="fade-in">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div><i class='bx bxl-html5'></i><p>HTML</p></div>
+      <div><i class='bx bxl-css3'></i><p>CSS</p></div>
+      <div><i class='bx bxl-javascript'></i><p>JavaScript</p></div>
+      <div><i class='bx bxl-git'></i><p>Git</p></div>
     </div>
   </section>
 
   <section id="contact" class="fade-in">
-    <h2 id="contact-title">Contact</h2>
+    <h2>Contato</h2>
     <div class="contact-links">
-      <a href="mailto:vinicius@email.com"><i class="fas fa-envelope"></i>Email</a>
-      <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn</a>
-      <a href="https://github.com/viniciusmonarolo" target="_blank"><i class="fab fa-github"></i>GitHub</a>
-      <a href="/resume.pdf" target="_blank"><i class="fas fa-file"></i>Resume</a>
+      <a href="mailto:vinicius@example.com"><i class='bx bx-envelope'></i></a>
+      <a href="https://github.com/ViniciusMonarolo" target="_blank"><i class='bx bxl-github'></i></a>
+      <a href="https://linkedin.com/in/viniciusmonarolo" target="_blank"><i class='bx bxl-linkedin'></i></a>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Vinícius Monarolo. All rights reserved.</p>
+    <p>© 2025 Vinícius Monarolo</p>
   </footer>
-    <script src="script.js"></script> 
-    </body>
-    
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Fade-in ao rolar
   const faders = document.querySelectorAll('.fade-in');
 
+  // Fade-in ao rolar
   window.addEventListener('scroll', () => {
     faders.forEach(el => {
       const rect = el.getBoundingClientRect();
@@ -11,35 +11,106 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Troca de idioma (PT/EN simples)
-  const langBtn = document.getElementById("lang-toggle");
+  const texts = {
+    pt: {
+      header: "Desenvolvedor Web",
+      aboutTitle: "Sobre mim",
+      aboutText: "Sou um desenvolvedor apaixonado por tecnologia e criação de soluções web modernas.",
+      projectsTitle: "Projetos",
+      skillsTitle: "Skills",
+      contactTitle: "Contato",
+      projects: [
+        {
+          title: "Landing Page",
+          desc: "Uma landing page moderna feita com HTML, CSS e JavaScript.",
+          stack: "HTML, CSS, JavaScript",
+          btn: "Ver Projeto",
+          link: "https://github.com/ViniciusMonarolo/Projeto-Curso"
+        },
+        {
+          title: "Pokedex",
+          desc: "Pokedex consumindo uma API para exibir dados de Pokémon.",
+          stack: "HTML, CSS, JavaScript",
+          btn: "Ver Projeto",
+          link: "https://github.com/ViniciusMonarolo/Projeto-Pokedex"
+        },
+        {
+          title: "Gerador de Senhas",
+          desc: "Gerador de senhas seguras com opções personalizadas.",
+          stack: "HTML, CSS, JavaScript",
+          btn: "Ver Projeto",
+          link: "https://github.com/ViniciusMonarolo/Gerador-de-senhas"
+        }
+      ]
+    },
+    en: {
+      header: "Web Developer",
+      aboutTitle: "About me",
+      aboutText: "I am a developer passionate about technology and creating modern web solutions.",
+      projectsTitle: "Projects",
+      skillsTitle: "Skills",
+      contactTitle: "Contact",
+      projects: [
+        {
+          title: "Landing Page",
+          desc: "A modern landing page built with HTML, CSS, and JavaScript.",
+          stack: "HTML, CSS, JavaScript",
+          btn: "View Project",
+          link: "https://github.com/ViniciusMonarolo/Projeto-Curso"
+        },
+        {
+          title: "Pokedex",
+          desc: "Pokedex consuming an API to display Pokémon data.",
+          stack: "HTML, CSS, JavaScript",
+          btn: "View Project",
+          link: "https://github.com/ViniciusMonarolo/Projeto-Pokedex"
+        },
+        {
+          title: "Password Generator",
+          desc: "Generates secure passwords with customizable options.",
+          stack: "HTML, CSS, JavaScript",
+          btn: "View Project",
+          link: "https://github.com/ViniciusMonarolo/Gerador-de-senhas"
+        }
+      ]
+    }
+  };
+
   let lang = "pt";
+  const langBtn = document.getElementById("lang-toggle");
 
   langBtn.addEventListener("click", () => {
-    if (lang === "pt") {
-      document.querySelector("header p").textContent = "Web Developer";
-      document.querySelector("#about h2").textContent = "About me";
-      document.querySelector("#about p").textContent = "I am a developer passionate about technology and creating modern web solutions.";
-      document.querySelector("#projects h2").textContent = "Projects";
-      document.querySelector("#skills h2").textContent = "Skills";
-      document.querySelector("#contact h2").textContent = "Contact";
-      document.querySelectorAll(".btn")[0].textContent = "View Project";
-      document.querySelectorAll(".btn")[1].textContent = "View Project";
-      document.querySelectorAll(".btn")[2].textContent = "View Project";
-      langBtn.textContent = "PT";
-      lang = "en";
-    } else {
-      document.querySelector("header p").textContent = "Desenvolvedor Web";
-      document.querySelector("#about h2").textContent = "Sobre mim";
-      document.querySelector("#about p").textContent = "Sou um desenvolvedor apaixonado por tecnologia e criação de soluções web modernas.";
-      document.querySelector("#projects h2").textContent = "Projetos";
-      document.querySelector("#skills h2").textContent = "Skills";
-      document.querySelector("#contact h2").textContent = "Contato";
-      document.querySelectorAll(".btn")[0].textContent = "Ver Projeto";
-      document.querySelectorAll(".btn")[1].textContent = "Ver Projeto";
-      document.querySelectorAll(".btn")[2].textContent = "Ver Projeto";
-      langBtn.textContent = "EN";
-      lang = "pt";
+    lang = lang === "pt" ? "en" : "pt";
+    const data = texts[lang];
+
+    // Header e seções
+    document.querySelector("header p").textContent = data.header;
+    document.querySelector("#about h2").textContent = data.aboutTitle;
+    document.querySelector("#about p").textContent = data.aboutText;
+    document.querySelector("#projects h2").textContent = data.projectsTitle;
+    document.querySelector("#skills h2").textContent = data.skillsTitle;
+    document.querySelector("#contact h2").textContent = data.contactTitle;
+
+    // Projetos
+    const projectCards = document.querySelectorAll(".project");
+    projectCards.forEach((card, i) => {
+      card.querySelector("h3").textContent = data.projects[i].title;
+      const paragraphs = card.querySelectorAll("p");
+      paragraphs[0].textContent = data.projects[i].desc;
+      paragraphs[1].innerHTML = `<strong>Stack:</strong> ${data.projects[i].stack}`;
+      const link = card.querySelector(".btn");
+      link.textContent = data.projects[i].btn;
+      link.href = data.projects[i].link;
+    });
+
+    langBtn.textContent = lang === "pt" ? "EN" : "PT";
+  });
+
+  // Fade-in inicial
+  faders.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      el.classList.add('show');
     }
   });
 });
